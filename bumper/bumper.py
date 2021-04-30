@@ -24,8 +24,12 @@ class bumper(commands.Cog):
           channel = guild.get_channel(826399186659442689) 
           x='''It's Bump Time! 
   Type **!d bump** to Support us'''
-
+          y='(https://disboard.org/review/create/799526257506254868)'
           if 'Bump done' in y: 
+              await message.add_reaction('<a:check_mark:835569829901107273>')
+              embed=discord.Embed(title='Thanks for bumping us',description=f'Drop a review [here]{y} if you want',color=0x2f3136)
+              embed.set_thumbnail(url='https://imgur.com/krnJcfG')
+              await channel.send(embed=embed)
               await asyncio.sleep(7200)
               em=discord.Embed(title='Discord Bump Reminder!',description=x,color=0x2f3136)
               em.set_thumbnail(url='https://cdn.discordapp.com/attachments/824594210727395368/826412920766332998/B.gif')
