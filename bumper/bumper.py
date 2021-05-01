@@ -41,7 +41,7 @@ class bumper(commands.Cog):
         guild=self.bot.get_guild(799526257506254868)
         channel = guild.get_channel(826399186659442689)
         rev='(https://disboard.org/review/create/799526257506254868)'
-        em=discord.Embed(description='<:fox_wot:836972475828404255> *Drop a review* **[here]{rev}** if you want',color=0x2f3136)
+        em=discord.Embed(description='<:fox_wot:836972475828404255> *Drop a review* [here]{rev} if you want',color=0x2f3136)
         await channel.send(embed=em)
 def setup(bot):
     bot.add_cog(bumper(bot))
