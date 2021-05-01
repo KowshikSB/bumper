@@ -34,6 +34,7 @@ class bumper(commands.Cog):
               await asyncio.sleep(7200)
               em=discord.Embed(title='Discord Bump Reminder!',description=x,color=0x2f3136)
               em.set_thumbnail(url='https://cdn.discordapp.com/attachments/824594210727395368/826412920766332998/B.gif')
+              em.set_footer(text="Cloudy With A Chance of Depression")
               await channel.send ('<a:capoo_work:825020992609976380> <@&825015601365778482>',embed=em)
         except IndexError:
           return None
