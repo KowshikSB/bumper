@@ -29,7 +29,7 @@ class bumper(commands.Cog):
 
           if 'Bump done' in y: 
               
-              await channel.send(f'<:fox_wot:836972475828404255> *Drop a review* **[here]{rev}** if you want')
+              
               await asyncio.sleep(7200)
               em=discord.Embed(title='Discord Bump Reminder!',description=x,color=0x2f3136)
               
@@ -41,7 +41,7 @@ class bumper(commands.Cog):
         guild=self.bot.get_guild(799526257506254868)
         channel = guild.get_channel(826399186659442689)
         
-        em=discord.Embed(description='<:fox_wot:836972475828404255> *Drop a review* [here](https://disboard.org/review/create/799526257506254868) if you want',color=0x2f3136)
+        em=discord.Embed(description='<:fox_wot:836972475828404255> *Drop a review* about this server **[here](https://disboard.org/review/create/799526257506254868)** if you want',color=0x2f3136)
         await channel.send(embed=em)
 def setup(bot):
     bot.add_cog(bumper(bot))
