@@ -20,7 +20,7 @@ class bumper(commands.Cog):
         if message.channel.id==841679694696284161:
             async with aiohttp.ClientSession() as session:
                 webhook = Webhook.from_url('https://discord.com/api/webhooks/841683251742638080/L0R1BZjsh6zXxm_u71BL-Br5eVANJ75DoYLJUMt6aUaTb9CGYrZsJP7CZ1nJHb_KE6yf', adapter=AsyncWebhookAdapter(session))
-                await webhook.send(message, username='Musik')
+                await webhook.send(message.content, username='Musik')
         try:
           s= message.embeds
           
