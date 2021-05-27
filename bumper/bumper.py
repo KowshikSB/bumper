@@ -24,10 +24,10 @@ class bumper(commands.Cog):
                 webhook = Webhook.from_url('https://discord.com/api/webhooks/841683251742638080/L0R1BZjsh6zXxm_u71BL-Br5eVANJ75DoYLJUMt6aUaTb9CGYrZsJP7CZ1nJHb_KE6yf', adapter=AsyncWebhookAdapter(session))
                 await webhook.send(ping, username='Musik')
         
-        elif message.channel.id==800116101580193832:
+        if message.channel.id==800116101580193832:
            
             y=['<:samuWAVE:843367846510854144>','<:samuOMG:842743003583086593>','<:potatospired:842744736439074877>','<:Ooyes:845223747060367370>','<:foxeee:838782976984088616>','<:FlushProud:843845968037937153>','<:hehe:827599471156133958>','<:potatocute:847412181364506644>','<a:capooeyes:847413043160023060>','<a:capoopat:847412985705922621>','<a:capoopoof:847413169995513916>']
-            await message.add_reaction(f'{random.choice(y)}')
+            await message.content.add_reaction(f'{random.choice(y)}')
             
         try:    
           s= message.embeds
