@@ -43,8 +43,8 @@ class bumper(commands.Cog):
           
 
           if 'Bump done' in y: 
-              emd=discord.Embed(description='<:fox_wot:836972475828404255> *Drop a review about this server* **[here](https://disboard.org/review/create/799526257506254868)** *if you want*',color=0x2f3136)
-              await channel.send(embed=emd)
+              emd=discord.Embed(description='<a:capoopoof:847413169995513916> *Drop a review about this server*  ***[here](https://disboard.org/review/create/799526257506254868)*** *if you want to support us! :D*',color=0x2f3136)
+              await message.reply(embed=emd)
               
               await asyncio.sleep(7200)
               em=discord.Embed(title='Discord Bump Reminder!',description=x,color=0x2f3136)
@@ -53,7 +53,7 @@ class bumper(commands.Cog):
               await channel.send ('<a:capoo_work:825020992609976380> <@&825015601365778482>',embed=em)
         except IndexError:
           return None
-    
+
         
         
 def setup(bot):
