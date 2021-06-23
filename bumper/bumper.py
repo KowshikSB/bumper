@@ -20,7 +20,8 @@ class bumper(commands.Cog):
         intro=guild.get_channel(800116101580193832)
         if message.channel.id==846610690592342017:
             async with aiohttp.ClientSession() as session:
-                ping=f'{message.content}'
+                ping=f''' <@&834800131416260639>
+                > {message.content}'''
                 webhook = Webhook.from_url('https://discord.com/api/webhooks/841683251742638080/L0R1BZjsh6zXxm_u71BL-Br5eVANJ75DoYLJUMt6aUaTb9CGYrZsJP7CZ1nJHb_KE6yf', adapter=AsyncWebhookAdapter(session))
                 await webhook.send(ping, username='Musik')
         
