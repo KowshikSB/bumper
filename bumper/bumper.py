@@ -17,6 +17,11 @@ class bumper(commands.Cog):
         guild=self.bot.get_guild(799526257506254868)
         
         intro=guild.get_channel(800116101580193832)
+        musik = guild.get_channel(835539153235476570) 
+        if message.channel.id==846610690592342017:
+            ping=f''' <@&834800131416260639>
+> {message.content}'''
+            await musik.send(ping)
         
         if message.channel.id==800116101580193832:
            
