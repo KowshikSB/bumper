@@ -23,35 +23,35 @@ class bumper(commands.Cog):
 > {message.content}'''
             await musik.send(ping)
         
-        if message.channel.id==800116101580193832:
+        elif message.channel.id==800116101580193832:
            
             y=['<a:hiwave:845251975281115146> ','<:potatospired:842744736439074877>','<:Ooyes:845223747060367370>','<:foxeee:838782976984088616>','<:FlushProud:843845968037937153>','<:hehe:827599471156133958>','<:potatocute:847412181364506644>','<a:capooeyes:847413043160023060>','<a:capoopat:847412985705922621>','<a:capoopoof:847413169995513916>']
             await message.add_reaction(f'{random.choice(y)}')
-            
-        try:    
-          s= message.embeds
-          
-          z=s[0]
-          
-          y=z.description
-          
-          guild=self.bot.get_guild(799526257506254868)
-          channel = guild.get_channel(826399186659442689) 
-          x='''It's Bump Time! 
-  Type **!d bump** to Support us'''
-          
+        else:    
+            try:    
+                s= message.embeds
+                
+                z=s[0]
+                
+                y=z.description
+                
+                guild=self.bot.get_guild(799526257506254868)
+                channel = guild.get_channel(826399186659442689) 
+                x='''It's Bump Time! 
+        Type **!d bump** to Support us'''
+                
 
-          if 'Bump done' in y: 
-              emd=discord.Embed(description='<a:capoopoof:847413169995513916> *Drop a review about this server*  ***[here](https://disboard.org/review/create/799526257506254868)*** *if you want to support us! :D*',color=0x2f3136)
-              await message.reply(embed=emd)
-              
-              await asyncio.sleep(7200)
-              em=discord.Embed(title='Discord Bump Reminder!',description=x,color=0x2f3136)
-              em.set_thumbnail(url='https://cdn.discordapp.com/attachments/824594210727395368/826412920766332998/B.gif')
-              em.set_footer(text="Cloudy With A Chance of Depression")
-              await channel.send ('<a:capoo_work:825020992609976380> <@&825015601365778482>',embed=em)
-        except IndexError:
-          return None
+                if 'Bump done' in y: 
+                    emd=discord.Embed(description='<a:capoopoof:847413169995513916> *Drop a review about this server*  ***[here](https://disboard.org/review/create/799526257506254868)*** *if you want to support us! :D*',color=0x2f3136)
+                    await message.reply(embed=emd)
+                    
+                    await asyncio.sleep(7200)
+                    em=discord.Embed(title='Discord Bump Reminder!',description=x,color=0x2f3136)
+                    em.set_thumbnail(url='https://cdn.discordapp.com/attachments/824594210727395368/826412920766332998/B.gif')
+                    em.set_footer(text="Cloudy With A Chance of Depression")
+                    await channel.send ('<a:capoo_work:825020992609976380> <@&825015601365778482>',embed=em)
+            except IndexError:
+                return None
 
         
         
